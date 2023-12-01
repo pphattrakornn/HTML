@@ -6,23 +6,20 @@
     <title>Hello Kub</title>
     <style>
         
-            
-            
-        
-        /*สื่งที่มีอยู่ตรงนี้ จะมีไว้ให้แค่ Dev อ่าน*/
+        /*สิ่งที่มีอยู่ตรงนี้ จะมีไว้ให้แค่ Dev อ่าน */
         /*1.แต่งใคร (id, class, DOM) 2.แต่งอะไร*/
         @font-face {
             font-family: 'Kanit';
             src: url(./Kanit/Kanit-Regular.ttf);
         }
-        
+
         body {
             font-family: 'Kanit';
-            background-color: whitesmoke
+            background-color: whitesmoke;
             /* Body ใช้เปลี่ยนแค่ส่วนที่เป็น Body */
         }
-        
-        #register{
+
+        #register {
             font-size: 24px;
             color: blue;
             font-weight: 800;
@@ -35,41 +32,46 @@
             background-color: yellow;
             /* ID ต้องกำหนดขึ้นมาเอง */
         }
-        
-        .header-form{
+
+        .header-form {
             font-weight: 800;
             /* Class ที่กำหนดใช้ใน Input */
         }
-        
-        .form{
+
+        .form {
             display: block;
         }
 
-        .gender{
+        .gender {
             display: flex;
-            flex-direction: row-reverse;
+            flex-direction: row;
+            order: -1;
         }
-        .container{
-            display: flex;
-        }
-        
-        .item-Left{
+
+        .item-Left {
             background-color: red;
             flex: 1;
         }
-        
-        .item-Right{
+
+        .item-Right {
             background-color: blue;
             flex: 2;
         }
-        
-        .grid-container{
-            display: grid;
+
+        .grid-container {
+            display: flex;
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
 
-    </style>
+        .grid-item {
+            flex: 1;
+            margin: 5px;
+        }
 
+        .interest-container {
+            order: 1;
+        }
+    </style>
 </head>
 <body>
     <!-- ส่วนที่แสดงออกไปหน้าจอ Browser-->
@@ -85,44 +87,49 @@
         <div class="grid-item">item 3</div>
         <div class="grid-item">item 4</div>
     </div>
-    <div id ="register">Register Form </div>
 
-<span class="header-form">ชื่อจริง</span>
-<input class="form" type="text"> 
+    <div id="register">Register Form </div>
 
-<span class="header-form">นามสกุล</span>
-<input class="form" type="text"> <br>
-<span class= "header-form">อายุ</span>
-<input class="form" type="number" min="0" max="100">
-<div class="gender">
-    เพศ
-    <div>
-        <input name ="gender" type="radio"> ชาย
-    </div>
-    <div>
-        <input name ="gender" type="radio"> หญิง
-    </div>
-    <div>
-        <input name ="gender" type="radio"> ไม่ระบุเพศ 
-    </div> 
- <div> 
-        สิ่งที่น่าสนใจ 
+    <span class="header-form">ชื่อจริง</span>
+    <input class="form" type="text">
+
+    <span class="header-form">นามสกุล</span>
+    <input class="form" type="text"><br>
+
+    <span class="header-form">อายุ</span>
+    <input class="form" type="number" min="0" max="100">
+
+    <div class="gender">
+        <span class="header-form">เพศ</span>
         <div>
-            <input name="interest" type="checkbox" > หนังสือ
+            <input name="gender" type="radio"> ชาย
         </div>
         <div>
-            <input name="interest" type="checkbox" > หนัง
+            <input name="gender" type="radio"> หญิง
         </div>
         <div>
-            <input name="interest" type="checkbox" > การเรียน
+            <input name="gender" type="radio"> ไม่ระบุเพศ 
+        </div>
+    </div>
+
+    <div class="interest-container">
+        <span class="header-form">สิ่งที่น่าสนใจ</span>
+        <div>
+            <input name="interest" type="checkbox"> หนังสือ
+        </div>
+        <div>
+            <input name="interest" type="checkbox"> หนัง
+        </div>
+        <div>
+            <input name="interest" type="checkbox"> การเรียน
         </div>
         <div>
             คำอธิบายตัวตนเพิ่มเติม
             <div>
-                <textarea>
-                </textarea>
+                <textarea></textarea>
             </div>
             <button>ส่งข้อมูล</button>
-</div>
+        </div>
+    </div>
 </body>
 </html>
