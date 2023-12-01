@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Kub</title>
+    <style>
+        
+            
+            
+        
+        /*สื่งที่มีอยู่ตรงนี้ จะมีไว้ให้แค่ Dev อ่าน*/
+        /*1.แต่งใคร (id, class, DOM) 2.แต่งอะไร*/
+        @font-face {
+            font-family: 'Kanit';
+            src: url(./Kanit/Kanit-Regular.ttf);
+        }
+        
+        body {
+            font-family: 'Kanit';
+            background-color: whitesmoke
+            /* Body ใช้เปลี่ยนแค่ส่วนที่เป็น Body */
+        }
+        
+        #register{
+            font-size: 24px;
+            color: blue;
+            font-weight: 800;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            border: 1px blue solid;
+            background-color: yellow;
+            /* ID ต้องกำหนดขึ้นมาเอง */
+        }
+        
+        .header-form{
+            font-weight: 800;
+            /* Class ที่กำหนดใช้ใน Input */
+        }
+        
+        .form{
+            display: block;
+        }
+
+        .gender{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .container{
+            display: flex;
+        }
+        
+        .item-Left{
+            background-color: red;
+            flex: 1;
+        }
+        
+        .item-Right{
+            background-color: blue;
+            flex: 2;
+        }
+        
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- ส่วนที่แสดงออกไปหน้าจอ Browser-->
+    <!-- 3. form -->
+    <div class="grid-container">
+        <div class="item-Left">Left</div>
+        <div class="item-Right">Right</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">item 1</div>
+        <div class="grid-item">item 2</div>
+        <div class="grid-item">item 3</div>
+        <div class="grid-item">item 4</div>
+    </div>
+    <div id ="register">Register Form </div>
+
+<span class="header-form">ชื่อจริง</span>
+<input class="form" type="text"> 
+
+<span class="header-form">นามสกุล</span>
+<input class="form" type="text"> <br>
+<span class= "header-form">อายุ</span>
+<input class="form" type="number" min="0" max="100">
+<div class="gender">
+    เพศ
+    <div>
+        <input name ="gender" type="radio"> ชาย
+    </div>
+    <div>
+        <input name ="gender" type="radio"> หญิง
+    </div>
+    <div>
+        <input name ="gender" type="radio"> ไม่ระบุเพศ 
+    </div> 
+ <div> 
+        สิ่งที่น่าสนใจ 
+        <div>
+            <input name="interest" type="checkbox" > หนังสือ
+        </div>
+        <div>
+            <input name="interest" type="checkbox" > หนัง
+        </div>
+        <div>
+            <input name="interest" type="checkbox" > การเรียน
+        </div>
+        <div>
+            คำอธิบายตัวตนเพิ่มเติม
+            <div>
+                <textarea>
+                </textarea>
+            </div>
+            <button>ส่งข้อมูล</button>
+</div>
+</body>
+</html>
